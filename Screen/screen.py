@@ -20,8 +20,9 @@ class DigitScreen():
                    '9':(0,0,0,1,0,1,0,0),
                    'C':(0,0,1,0,0,1,1,1),
                     '-':(1,1,1,1,1,1,1,0),
+                    'l':(1,0,1,0,0,1,1,1),
                     'H':(1,0,0,0,1,1,0,0),
-                    '_':(1,1,1,1,0,1,1,1)}
+                    '_':(1,1,1,1,0,1,1,1),}
 
         self._digits = []
         self._segments = []
@@ -49,7 +50,7 @@ class DigitScreen():
             
     def show(self,_num, t=5, f=0.1):
         _time_start = time()
-        print(_time_start)
+        #print(_time_start)
         while time()-_time_start < t:
             self.print_num(_num)
                      
@@ -75,6 +76,4 @@ def test():
     test.show('-HC_')
     test.show('1234')
     test.show('2137')
-
-
 
